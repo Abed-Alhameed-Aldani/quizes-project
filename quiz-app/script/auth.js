@@ -55,3 +55,25 @@ function login() {
   localStorage.setItem("currentUser", email);
   window.location.href = "home.html";
 }
+
+
+
+
+document.getElementById('forgotPasswordLink').addEventListener('click', function() {
+  const email = prompt("Enter your email to reset the password:");
+
+  if (!email) return alert("Please enter a valid email.");
+
+  let users = JSON.parse(localStorage.getItem('users')) || [];
+  const user = users.find(user => user.email === email);
+
+  if (!user) return alert("No account found with that email.");
+
+  const newPassword = prompt("Enter your new password:");
+  if (!newPassword) return alert("Please enter a valid password.");
+
+  user.password = newPassword;
+  localStorage.setItem('users', JSON.stringify(users));
+
+  alert("Your password has been reset successfully!");
+});
