@@ -56,4 +56,14 @@ body {
     display: none;
   }
   
+
+  #forgotPasswordLink {
+    font-size: 0.9em;
+    color: #0077cc;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #forgotPasswordLink:hover {
+    text-decoration: underline;
+  }
   
