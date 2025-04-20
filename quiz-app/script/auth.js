@@ -31,3 +31,27 @@ function register() {
   document.getElementById('loginTab').click();
 }
 
+
+
+
+
+function login() {
+  const email = document.getElementById('loginEmail').value;
+  const password = document.getElementById('loginPassword').value;
+
+  if (!email || !password) return alert("Please fill all fields.");
+
+  
+  if (email === "admin@quiz.com" && password === "admin123") {
+    localStorage.setItem("currentUser", email);
+    return window.location.href = "dashboard.html";
+  }
+
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  const user = users.find(user => user.email === email && user.password === password);
+
+  if (!user) return alert("Invalid credentials!");
+
+  localStorage.setItem("currentUser", email);
+  window.location.href = "home.html";
+}
