@@ -111,3 +111,13 @@ document.getElementById("submitBtn").addEventListener("click", () => {
   
   form.querySelectorAll("input").forEach(input => input.disabled = true);
   document.getElementById("submitBtn").disabled = true;
+
+ 
+  const goBackBtn = document.getElementById("goBackBtn");
+  goBackBtn.classList.remove("hidden");
+
+  
+  goBackBtn.addEventListener("click", () => {
+    window.location.href = "home.html"; 
+  });
+});
