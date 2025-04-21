@@ -9,3 +9,7 @@ const sampleQuizzes = [
   { id: 2, title: "Physics" },
   { id: 3, title: "Chemistry" }
 ];
+
+if (!localStorage.getItem("quizzes")) {
+  localStorage.setItem("quizzes", JSON.stringify(sampleQuizzes));
+}
