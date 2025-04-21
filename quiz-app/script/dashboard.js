@@ -27,3 +27,9 @@ users.forEach(user => {
 
 tableHTML += "</table>";
 userTable.innerHTML = tableHTML;
+
+
+function logout() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "index.html";
+} 
