@@ -22,3 +22,13 @@ quizzes.forEach((quiz) => {
   const div = document.createElement("div");
   div.className = "quiz-item";
   div.textContent = quiz.title;
+
+ 
+  div.addEventListener("click", () => {
+    localStorage.setItem("currentQuizId", quiz.id);
+    window.location.href = "quiz.html";
+  });
+
+  
+  quizList.appendChild(div);
+});
