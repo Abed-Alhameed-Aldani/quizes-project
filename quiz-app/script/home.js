@@ -17,3 +17,8 @@ if (!localStorage.getItem("quizzes")) {
 
 const quizzes = JSON.parse(localStorage.getItem("quizzes")) || [];
 const quizList = document.getElementById("quizList");
+
+quizzes.forEach((quiz) => {
+  const div = document.createElement("div");
+  div.className = "quiz-item";
+  div.textContent = quiz.title;
