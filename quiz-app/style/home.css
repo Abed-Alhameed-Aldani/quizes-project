@@ -11,3 +11,11 @@ body {
     overflow: hidden; 
   }
   
+
+  .home-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px; 
+  }
+  
