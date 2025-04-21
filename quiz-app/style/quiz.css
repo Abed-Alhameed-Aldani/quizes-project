@@ -26,3 +26,16 @@ body {
     text-align: center;
   }
   
+ 
+  /* Individual Question Block */
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  /* Options List Styling */
+  .options label {
+    display: block;
+    margin: 5px 0;
+    cursor: pointer;
+  }
+  
