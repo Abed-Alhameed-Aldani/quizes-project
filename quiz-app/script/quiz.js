@@ -57,3 +57,7 @@ const allQuestions = {
     }
   ]
 };
+
+
+const quiz = quizzes.find(q => q.id === currentQuizId);
+document.getElementById("quizTitle").textContent = quiz ? quiz.title : "Quiz";
