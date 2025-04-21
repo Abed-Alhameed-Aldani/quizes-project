@@ -64,3 +64,17 @@ body {
     margin-top: 20px;
   }
   
+
+  #goBackBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  #goBackBtn:hover {
+    background: #e67e22;
+  }
+  
