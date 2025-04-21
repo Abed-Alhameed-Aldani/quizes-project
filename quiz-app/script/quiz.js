@@ -85,3 +85,25 @@ questions.forEach((q, index) => {
   div.appendChild(optionsDiv);
   form.appendChild(div);
 });
+
+
+
+document.getElementById("submitBtn").addEventListener("click", () => {
+  let score = 0;
+  questions.forEach((q, index) => {
+    const selected = form.querySelector(`input[name="q${index}"]:checked`);
+    if (selected && selected.value === q.answer) {
+      score++;
+    }
+  });
+
+  document.getElementById("scoreBox").classList.remove("hidden");
+  document.getElementById("scoreBox").textContent = `You scored ${score} out of ${questions.length}!`;
+
+  
+  const userIndex = users.findIndex(u => u.email === currentUserEmail);
+  if (userIndex !== -1) {
+    users[userIndex].scores = users[userIndex].scores || [];
+    users[userIndex].scores.push({ quizId: currentQuizId, score });
+    localStorage.setItem("users", JSON.stringify(users));
+  }

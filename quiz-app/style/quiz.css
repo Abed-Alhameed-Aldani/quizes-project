@@ -37,7 +37,7 @@ body {
     cursor: pointer;
   }
   
-
+  
   button {
     display: block;
     margin: 20px auto;
@@ -49,6 +49,6 @@ body {
     cursor: pointer;
   }
   button:hover {
-    background: #005fa3;
+    background: #6cc500;
   }
   
