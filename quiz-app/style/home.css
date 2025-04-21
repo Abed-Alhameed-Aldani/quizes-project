@@ -37,3 +37,7 @@ body {
     transition: background 0.3s;
   }
   
+  .quiz-item:hover {
+    background: #ff0000; 
+  }
+  
