@@ -27,15 +27,28 @@ body {
   }
   
  
-  /* Individual Question Block */
   .question {
     margin-bottom: 20px;
   }
   
-  /* Options List Styling */
   .options label {
     display: block;
     margin: 5px 0;
     cursor: pointer;
+  }
+  
+
+  button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #005fa3;
   }
   
