@@ -41,3 +41,13 @@ body {
     background: #ff0000; 
   }
   
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
