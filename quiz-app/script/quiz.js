@@ -107,3 +107,7 @@ document.getElementById("submitBtn").addEventListener("click", () => {
     users[userIndex].scores.push({ quizId: currentQuizId, score });
     localStorage.setItem("users", JSON.stringify(users));
   }
+
+  
+  form.querySelectorAll("input").forEach(input => input.disabled = true);
+  document.getElementById("submitBtn").disabled = true;
