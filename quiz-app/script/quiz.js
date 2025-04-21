@@ -61,3 +61,27 @@ const allQuestions = {
 
 const quiz = quizzes.find(q => q.id === currentQuizId);
 document.getElementById("quizTitle").textContent = quiz ? quiz.title : "Quiz";
+
+
+const questions = allQuestions[currentQuizId];
+const form = document.getElementById("quizForm");
+
+questions.forEach((q, index) => {
+  const div = document.createElement("div");
+  div.className = "question";
+  div.innerHTML = `<p>${index + 1}. ${q.question}</p>`;
+
+  const optionsDiv = document.createElement("div");
+  optionsDiv.className = "options";
+
+  q.options.forEach(opt => {
+    const id = `q${index}_${opt}`;
+    optionsDiv.innerHTML += `
+      <label for="${id}">
+        <input type="radio" name="q${index}" value="${opt}" id="${id}"> ${opt}
+      </label>`;
+  });
+
+  div.appendChild(optionsDiv);
+  form.appendChild(div);
+});
